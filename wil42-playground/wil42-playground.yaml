@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: wil42-playground
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
   - port: 8888
     targetPort: 8888
+    nodePort: 30042
   selector:
     app: wil42-playground-app
 
